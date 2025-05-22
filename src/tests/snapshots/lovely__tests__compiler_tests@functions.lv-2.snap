@@ -81,14 +81,69 @@ Program(
         Expression {
             span: Span {
                 start: 47,
-                end: 98,
+                end: 92,
+            },
+            kind: VariableDecl {
+                name: "add",
+                value: Expression {
+                    span: Span {
+                        start: 54,
+                        end: 92,
+                    },
+                    kind: Function {
+                        parameters: [
+                            FunctionParameter {
+                                modifier: Read,
+                                labeled_at_callsite: false,
+                                internal_name: "x",
+                                external_name: None,
+                                ty: Ident(
+                                    "Unit",
+                                ),
+                            },
+                            FunctionParameter {
+                                modifier: Read,
+                                labeled_at_callsite: true,
+                                internal_name: "y",
+                                external_name: Some(
+                                    "to",
+                                ),
+                                ty: Ident(
+                                    "Unit",
+                                ),
+                            },
+                        ],
+                        return_type: Some(
+                            Ident(
+                                "Unit",
+                            ),
+                        ),
+                        body: Expression {
+                            span: Span {
+                                start: 90,
+                                end: 92,
+                            },
+                            kind: Block(
+                                [],
+                            ),
+                        },
+                    },
+                },
+                mutable: false,
+                ty: None,
+            },
+        },
+        Expression {
+            span: Span {
+                start: 94,
+                end: 169,
             },
             kind: VariableDecl {
                 name: "main",
                 value: Expression {
                     span: Span {
-                        start: 55,
-                        end: 98,
+                        start: 102,
+                        end: 169,
                     },
                     kind: Function {
                         parameters: [],
@@ -99,22 +154,22 @@ Program(
                         ),
                         body: Expression {
                             span: Span {
-                                start: 69,
-                                end: 98,
+                                start: 116,
+                                end: 169,
                             },
                             kind: Block(
                                 [
                                     Expression {
                                         span: Span {
-                                            start: 73,
-                                            end: 91,
+                                            start: 120,
+                                            end: 138,
                                         },
                                         kind: VariableDecl {
                                             name: "x",
                                             value: Expression {
                                                 span: Span {
-                                                    start: 78,
-                                                    end: 91,
+                                                    start: 125,
+                                                    end: 138,
                                                 },
                                                 kind: FunctionCall {
                                                     name: "add",
@@ -123,8 +178,8 @@ Program(
                                                             label: None,
                                                             value: Expression {
                                                                 span: Span {
-                                                                    start: 82,
-                                                                    end: 83,
+                                                                    start: 129,
+                                                                    end: 130,
                                                                 },
                                                                 kind: IntLiteral(
                                                                     4,
@@ -137,8 +192,8 @@ Program(
                                                             ),
                                                             value: Expression {
                                                                 span: Span {
-                                                                    start: 89,
-                                                                    end: 90,
+                                                                    start: 136,
+                                                                    end: 137,
                                                                 },
                                                                 kind: IntLiteral(
                                                                     9,
@@ -154,8 +209,56 @@ Program(
                                     },
                                     Expression {
                                         span: Span {
-                                            start: 95,
-                                            end: 96,
+                                            start: 142,
+                                            end: 162,
+                                        },
+                                        kind: VariableDecl {
+                                            name: "y",
+                                            value: Expression {
+                                                span: Span {
+                                                    start: 147,
+                                                    end: 162,
+                                                },
+                                                kind: FunctionCall {
+                                                    name: "add",
+                                                    arguments: [
+                                                        FunctionArgument {
+                                                            label: None,
+                                                            value: Expression {
+                                                                span: Span {
+                                                                    start: 151,
+                                                                    end: 153,
+                                                                },
+                                                                kind: Block(
+                                                                    [],
+                                                                ),
+                                                            },
+                                                        },
+                                                        FunctionArgument {
+                                                            label: Some(
+                                                                "to",
+                                                            ),
+                                                            value: Expression {
+                                                                span: Span {
+                                                                    start: 159,
+                                                                    end: 161,
+                                                                },
+                                                                kind: Block(
+                                                                    [],
+                                                                ),
+                                                            },
+                                                        },
+                                                    ],
+                                                },
+                                            },
+                                            mutable: false,
+                                            ty: None,
+                                        },
+                                    },
+                                    Expression {
+                                        span: Span {
+                                            start: 166,
+                                            end: 167,
                                         },
                                         kind: Ident(
                                             "x",
